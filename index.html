@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>控制台</title>
+  </head>
+  <style>
+       body{
+        padding:150px;
+       } 
+       /* 侧栏 */
+     .sidebar {
+       display:none;
+     }
+
+     @media (min-width: 800px) {
+       .sidebar {
+         position: fixed;
+         top: 10px;
+         bottom: 0;
+         left: 0;
+         z-index: 1000;
+         display: block;
+         padding: 10px;
+         overflow-x: hidden;
+         overflow-y: auto; 
+         background-color: pink;
+         border-right: 1px solid black;
+       }
+     }
+     .nav-sidebar {
+       margin-right: -30px;
+       margin-bottom: 10px;
+       margin-left: -10px;
+     }
+     .nav-sidebar > li > a {
+       padding-right: 15px;
+       padding-left: 15px;
+     }
+     .nav-sidebar > .active > a,
+     .nav-sidebar > .active > a:hover,
+     .nav-sidebar > .active > a:focus {
+       color:blue;
+       background-color: pink;
+     }
+     /* 头部标题 */
+     .main {
+       padding: 0px;
+     }
+     @media (min-width: 768px) {
+       .main {
+         padding-right: 20px;
+         padding-left: 20px;
+       }
+     }
+     .main .page-header {
+       margin-top: 0;
+     }
+     .badge{
+      float: right;
+     }
+  </style>
+  <body>
+ <!-- 导航条 -->
+   <input type="text" class="form-control" placeholder="用户名..."></div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="密码..."></div>
+              <button type="submit" class="btn btn-default">登录</button>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">管理控制台</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能 <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <li class="dropdown-header">业务功能</li>
+                <li><a href="#">信息建立</a></li>
+                <li><a href="#">信息查询</a></li>
+                <li><a href="#">信息管理</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">系统功能</li>
+                <li><a href="#">设置</a></li>
+              </ul>
+                <li><a href="#">帮助</a></li>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- 栅格系统 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">信息建立</a></li>
+            <li><a href="">信息查询</a></li>
+            <li><a href="">信息管理</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+             <li><a href="">设置</a></li>
+            <li><a href="">帮助</a></li>
+           </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">管理控制台</h1>
+          <p><button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">
+            订单一
+          </button>
+          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            订单二
+          </button>
+          <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
+            订单三
+          </button>
+          <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off">
+            订单四
+          </button>
+          <button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
+            订单五
+          </button>
+          <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+            订单六
+          </button></p>
+          <!-- 上面 -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">最新提醒</div>
+                    <div class="panel-body">
+                      <div class="alert alert-success" role="alert"><strong>提示</strong> 您的订单已安全退回</div>
+                      <div class="alert alert-danger" role="alert"><strong>提示</strong> 您的订单已被接受</div>
+                      <div class="alert alert-warning" role="alert"><strong>提示</strong> 您的订单将于明天到达</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                  <div class="panel panel-primary">
+                    <div class="panel-body">
+                      <ul class="nav nav-pills nav-stacked">
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 下面 -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">最新订单</div>
+                    <div class="panel-body">
+                      <table class="table table-striped">
+                        <tr>
+                          <th>#</th>
+                          <th>产品</th>
+                          <th>数量</th>
+                          <th>总金额</th>
+                          <th>业务员</th>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>Apple Macbook air</td>
+                          <td>10</td>
+                          <td>8000000</td>
+                          <td>红星</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Apple iPad air</td>
+                          <td>20</td>
+                          <td>6500000</td>
+                          <td>白白</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Apple Macbook pro</td>
+                          <td>5</td>
+                          <td>5000000</td>
+                          <td>拜拜</td>
+                        </tr>
+                      </table>
+  </body>
+</html>
